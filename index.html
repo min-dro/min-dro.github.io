@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 포트폴리오</title>
+    <style>
+        body { margin: 0; }
+
+        header { background: #1f1e33; border: 1px solid #a3a3a3; }
+
+        nav { padding: 0px 7px; border: 1px solid #a3a3a3; border-radius: 10px; }
+        nav ul { display: flex; justify-content: right; }
+        nav ul li { float:left; padding-right: 10px; list-style: none; }
+        
+        nav ul li a { padding: 20px;
+                      text-decoration: none; /* 텍스트 밑줄 제거를 위해 사용 */
+                      color: white; }      /* 폰트 색 변경 */
+        nav ul li a:hover {background: white; color: #1f1e33; }
+
+        .intro-section { display: flex; align-items: center; text-align: center; justify-content: center;}
+        .intro-section img { height: 260px;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about" id="about"><b>About</b></a></li>
+                <li><a href="#project" id="project"><b>Project</b></a></li>
+                <li><a href="#contant" id="contant"><b>Contant</b></a></li>
+                <li><a href="#code" id="code"  style="background: white; color: #1f1e33; border-radius: 25px;"><b>code</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-section">
+                <img src="assets/images/banner.jpg">
+                <div class="msg">
+                    <!-- 글자 움직이는 태그 : marquee -->
+                    <marquee><b>안녕하세요.<br>지민석입니다.</b></marquee>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-section"></section>
+        <section id="project" class="project-section"></section>
+    </main>
+    <footer>
+        <div id="contant" class="contant-section"></div>
+    </footer>
+</body>
+</html>
