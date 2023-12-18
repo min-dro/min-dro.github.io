@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 포트폴리오</title>
+    <style>
+        body { margin: 0; }
+
+        header { background: #1f1e33; border: 1px solid #a3a3a3; }
+
+        nav { padding: 0px 7px; border: 1px solid #a3a3a3; border-radius: 10px; }
+        nav ul { display: flex; justify-content: right; }
+        nav ul li { float:left; padding-right: 10px; list-style: none; }
+        
+        nav ul li a { padding: 20px;
+                      text-decoration: none; /* 텍스트 밑줄 제거를 위해 사용 */
+                      color: white; }      /* 폰트 색 변경 */
+        nav ul li a:hover { background: white; color: #1f1e33; }
+        .code {
+            background: white; color: #1f1e33;border-radius: 25px;
+        }
+        .code:hover {
+            background-color: #1f1e33; color: white;
+            border: 1px solid white;
+            transition: 0.2s ease-out;
+        }
+
+        .intro-section { display: flex; align-items: center; justify-content: center;}
+        .intro-section img { position: absolute; width: 230px; margin-right: 400px; bottom: 36%;}
+        #box{
+            height: 250px;
+            font-size: 2rem;
+            text-align: left;
+		}
+        .text{    width: 620px; margin-top: 30px;line-height: 58px;}
+        .More{ background: #1f1e33; color: white; text-decoration: none; position: absolute; bottom: 36%; padding: 8px 27px; border-radius: 20px; font-size: 18px; margin-top: 40px;}
+        .More:hover{ background-color: white; color: #1f1e33;
+            border: 1px solid #1f1e33;
+            transition: 0.5s ease-out; }
+        .about-section { text-align: center;}
+        .about-contents { display: flex; align-items: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about" id="about"><b>About</b></a></li>
+                <li><a href="#project" id="project"><b>Project</b></a></li>
+                <li><a href="#contant" id="contant"><b>Contant</b></a></li>
+                <li><a href="https://github.com/min-dro/min-dro.github.io" id="code" class="code"><b>code</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-section">
+                <img src="assets/image/profile.jpg">
+                <div id="box">
+                    <!-- 글자 움직이는 태그 : marquee -->
+                    <span class="text"></span>
+                </div>
+                <script>
+                    const content = "안녕하세요, \n 저는 리듬게임♬개발자가 되고 싶은 지민석입니다.";
+                    const text = document.querySelector(".text");
+                    let i = 0;
+                    function typing(){
+                        let txt = content[i++];
+                        text.innerHTML += txt=== "\n" ? "<br/>": txt;
+                        if (i > content.length) {
+                            text.textContent = "";
+                            i = 0;
+                        }
+                    }
+                    setInterval(typing, 200)
+                </script>
+                <a href="#about" id="about" class="More"><b>More</b></a>
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <a name="about"></a>
+        </section>
+        <section id="project" class="project-section">
+            <h2>프로젝트</h2>
+            <p>유튜브 클론 코딩</p>
+            <a href="index2.html">프로젝트 보기</a>
+        </section>
+    </main>
+    <footer>
+        <div id="contant" class="contant-section"></div>
+    </footer>
+</body>
+</html>
